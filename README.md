@@ -1,7 +1,7 @@
 # We Count Design System
 
-[![BSD 3-Clause License](https://badgen.net/github/license/inclusive-design/we-count-design-system)](https://github.com/inclusive-design/we-count-design-system/)
-[![Latest Release](https://badgen.net/github/release/inclusive-design/we-count-design-system)](https://github.com/inclusive-design/we-count-design-system/releases/latest)
+[![BSD 3-Clause License](https://badgen.net/github/license/inclusive-design/wecount-design-system)](https://github.com/inclusive-design/wecount-design-system/)
+[![Latest Release](https://badgen.net/github/release/inclusive-design/wecount-design-system)](https://github.com/inclusive-design/wecount-design-system/releases/latest)
 
 To run the design system microsite in local development mode:
 

@@ -1,11 +1,11 @@
 ---
-title: Inclusive Design Guide Design System
+title: We Count Design System
 layout: design-system/page
 ---
-[![BSD 3-Clause License](https://badgen.net/github/license/inclusive-design/idg-design-system)](https://github.com/inclusive-design/idg-design-system/)
-[![Latest Release](https://badgen.net/github/release/inclusive-design/idg-design-system)](https://github.com/inclusive-design/idg-design-system/releases/latest)
+[![BSD 3-Clause License](https://badgen.net/github/license/inclusive-design/wecount-design-system)](https://github.com/inclusive-design/wecount-design-system/)
+[![Latest Release](https://badgen.net/github/release/inclusive-design/wecount-design-system)](https://github.com/inclusive-design/wecount-design-system/releases/latest)
 
-This is the design system for the new [Inclusive Design Guide](https://guide.inclusivedesign.ca/).
+This is the design system for the [We Count](https://wecount.inclusivedesign.ca/) website.
 It is based on [original ISC-licensed code](https://github.com/trys/eleventy-design-system/)
 by [Trys Mudford](https://www.trysmudford.com/).
 
