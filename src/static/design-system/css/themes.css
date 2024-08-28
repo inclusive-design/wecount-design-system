@@ -1,0 +1,65 @@
+fieldset {
+    border: 0;
+    padding: 0;
+}
+
+select {
+    background: var(--fl-bgColor, inherit);
+    border: 0.125rem solid var(--fl-linkColor, currentColor);
+    border-radius: 0;
+    color: var(--fl-linkColor, currentColor);
+    font-family: var(--font-sans);
+    font-size: inherit;
+}
+
+[class^="fl-theme"] {
+    background-color: var(--fl-bgColor);
+}
+
+.fl-theme-bw {
+    --fl-fgColor: #000;
+    --fl-bgColor: #fff;
+    --fl-linkColor: #000;
+}
+
+.fl-theme-wb {
+    --fl-fgColor: #fff;
+    --fl-bgColor: #000;
+    --fl-linkColor: #fff;
+}
+
+.fl-theme-by {
+    --fl-fgColor: #000;
+    --fl-bgColor: #ff0;
+    --fl-linkColor: #000;
+}
+
+.fl-theme-yb {
+    --fl-fgColor: #ff0;
+    --fl-bgColor: #000;
+    --fl-linkColor: #ff0;
+}
+
+.fl-theme-lgdg {
+    --fl-fgColor: #bdbdbb;
+    --fl-bgColor: #555;
+    --fl-linkColor: #bdbdbb;
+}
+
+.fl-theme-gw {
+    --fl-fgColor: #6c6c6c;
+    --fl-bgColor: #fff;
+    --fl-linkColor: #66c;
+}
+
+.fl-theme-gd {
+    --fl-fgColor: #888;
+    --fl-bgColor: #222;
+    --fl-linkColor: #8080ff;
+}
+
+.fl-theme-bbr {
+    --fl-fgColor: #000;
+    --fl-bgColor: #b96;
+    --fl-linkColor: #009;
+}

@@ -1,0 +1,40 @@
+{% block head %}
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="/static/design-system/css/themes.css" />
+{% endblock %}
+
+<fieldset class="p-m" x-data="themeHandler()">
+    <div class="flex-row gap-2xs items-center">
+        <label for="theme">Theme:</label>
+        <select name="theme" id="theme" @change="switchTheme()" x-model.string="theme">
+            <option value="">Default</option>
+            <option value="fl-theme-bw">Black on white</option>
+            <option value="fl-theme-wb">White on black</option>
+            <option value="fl-theme-by">Black on yellow</option>
+            <option value="fl-theme-yb">Yellow on black</option>
+            <option value="fl-theme-lgdg">Light grey on grey</option>
+            <option value="fl-theme-gw">Grey on white</option>
+            <option value="fl-theme-gd">Grey on dark grey</option>
+            <option value="fl-theme-bbr">Black on brown</option>
+        </select>
+    </div>
+ <script>
+    function themeHandler() {
+        return {
+            init() {
+                this.theme = localStorage.getItem("theme") ?? "";
+                this.switchTheme();
+            },
+            switchTheme() {
+                if (this.theme) {
+                    localStorage.setItem("theme", this.theme);
+                    document.documentElement.className = this.theme;
+                } else {
+                    localStorage.removeItem("theme");
+                    document.documentElement.className = "js";
+                }
+            }
+        }
+    }
+</script>
+</fieldset>

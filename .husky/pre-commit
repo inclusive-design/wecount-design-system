@@ -1,0 +1,1 @@
+npx --no lint-staged && node bin/check-imports.js

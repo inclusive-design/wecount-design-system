@@ -1,0 +1,366 @@
+/* Foundations */
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1440,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+.ds {
+    --step--2: clamp(0.69rem, calc(0.66rem + 0.15vw), 0.8rem);
+    --step--1: clamp(0.83rem, calc(0.79rem + 0.24vw), 1rem);
+    --step-0: clamp(1rem, calc(0.93rem + 0.36vw), 1.25rem);
+    --step-1: clamp(1.2rem, calc(1.1rem + 0.52vw), 1.56rem);
+    --step-2: clamp(1.44rem, calc(1.29rem + 0.73vw), 1.95rem);
+    --step-3: clamp(1.73rem, calc(1.52rem + 1.02vw), 2.44rem);
+    --step-4: clamp(2.07rem, calc(1.79rem + 1.4vw), 3.05rem);
+    --step-5: clamp(2.49rem, calc(2.11rem + 1.9vw), 3.82rem);
+    --space-3xs: clamp(0.25rem, calc(0.23rem + 0.09vw), 0.31rem);
+    --space-2xs: clamp(0.5rem, calc(0.46rem + 0.18vw), 0.63rem);
+    --space-xs: clamp(0.75rem, calc(0.7rem + 0.27vw), 0.94rem);
+    --space-s: clamp(1rem, calc(0.93rem + 0.36vw), 1.25rem);
+    --space-m: clamp(1.5rem, calc(1.39rem + 0.54vw), 1.88rem);
+    --space-l: clamp(2rem, calc(1.86rem + 0.71vw), 2.5rem);
+    --space-xl: clamp(3rem, calc(2.79rem + 1.07vw), 3.75rem);
+    --space-2xl: clamp(4rem, calc(3.71rem + 1.43vw), 5rem);
+    --space-3xl: clamp(12rem, calc(11.14rem + 4.29vw), 15rem);
+    --space-4xl: clamp(15rem, calc(13.93rem + 5.36vw), 18.75rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, calc(0.14rem + 0.54vw), 0.63rem);
+    --space-2xs-xs: clamp(0.5rem, calc(0.38rem + 0.63vw), 0.94rem);
+    --space-xs-s: clamp(0.75rem, calc(0.61rem + 0.71vw), 1.25rem);
+    --space-s-m: clamp(1rem, calc(0.75rem + 1.25vw), 1.88rem);
+    --space-m-l: clamp(1.5rem, calc(1.21rem + 1.43vw), 2.5rem);
+    --space-l-xl: clamp(2rem, calc(1.5rem + 2.5vw), 3.75rem);
+    --space-xl-2xl: clamp(3rem, calc(2.43rem + 2.86vw), 5rem);
+    --space-2xl-3xl: clamp(4rem, calc(0.86rem + 15.71vw), 15rem);
+    --space-3xl-4xl: clamp(12rem, calc(10.07rem + 9.64vw), 18.75rem);
+
+
+    --font-system:
+        -apple-system,
+        blinkmacsystemfont,
+        avenir next,
+        avenir,
+        segoe ui,
+        helvetica neue,
+        helvetica,
+        cantarell,
+        ubuntu,
+        roboto,
+        noto,
+        arial,
+        sans-serif;
+
+    font-family: var(--font-system);
+}
+
+/* Typography */
+
+.ds-title,
+.ds-subtitle {
+    color: #182c61;
+    font-size: var(--step-1);
+    margin: 0;
+}
+
+.ds-subtitle {
+    font-size: var(--step-0);
+}
+
+.ds-prose {
+    color: #2f3542;
+    font-size: var(--step-0);
+    max-width: 50ch;
+}
+
+.ds-flow > *,
+.ds-prose > * {
+    margin: 0;
+}
+
+.ds-prose > * + * {
+    margin-top: 1em;
+}
+
+.ds-prose--with-lede > :not(p):first-child + p,
+.ds-prose--with-lede > p:first-child {
+    font-size: var(--step-1);
+}
+
+.ds-prose a {
+    color: #079992;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
+}
+
+.ds-flow--xs > * + * {
+    margin-top: var(--space-xs);
+}
+
+.ds-flow > * + * {
+    margin-top: var(--space-s);
+}
+
+.ds-link {
+    color: #574b90;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.ds-link[aria-selected="true"],
+.ds-link--active {
+    color: #079992;
+}
+
+/* Layout */
+
+.ds__body {
+    display: grid;
+    grid-template-columns: var(--space-3xl-4xl) 1fr;
+    height: 100vh;
+}
+
+.ds-stretch:not([hidden]) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.ds-frame iframe {
+    max-width: 100%;
+    resize: both;
+}
+
+.ds__sidebar {
+    background: #dfe4ea;
+    box-shadow: 0 0 var(--space-s) rgb(0 0 0 / 5%);
+    overflow-y: auto;
+    padding: var(--space-s);
+}
+
+.ds__sidebar ul ul {
+    font-size: var(--step--2);
+    padding: var(--space-3xs) 0 0 var(--space-xs);
+}
+
+.ds__sidebar li + li {
+    margin-top: var(--space-3xs);
+}
+
+.ds__main {
+    overflow-y: auto;
+    padding: var(--space-s);
+}
+
+/* Components */
+
+.ds-tabs {
+    border-bottom: 1px solid #d1d8e0;
+    display: flex;
+    gap: var(--space-s);
+    margin-bottom: var(--space-s);
+    padding-bottom: var(--space-s);
+}
+
+.ds-tabs li:last-child {
+    margin-left: auto;
+}
+
+.ds-code {
+    background: #eff4fa;
+    box-shadow: inset 0 0 var(--space-s) rgb(0 0 0 / 5%);
+    overflow: auto;
+    padding: var(--space-s);
+}
+
+/* Syntax Highlighting */
+
+.ds code[class*="language-"],
+.ds pre[class*="language-"] {
+    background: color("navy", "step-3");
+    color: #182c61;
+    font-family: "Source Code Pro", monospace;
+    font-size: 1rem;
+    hyphens: none;
+    line-height: 1.5em;
+    tab-size: 4;
+    text-align: left;
+    white-space: pre;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+}
+
+.ds code[class*="language-"]::selection,
+.ds pre[class*="language-"]::selection,
+.ds code[class*="language-"] ::selection,
+.ds pre[class*="language-"] ::selection {
+    background: #cceae7;
+    color: #263238;
+}
+
+.ds :not(pre) > code[class*="language-"] {
+    border-radius: 0.2em;
+    padding: 0.1em;
+    white-space: normal;
+}
+
+.ds pre[class*="language-"] {
+    overflow: auto;
+    position: relative;
+
+    @include padding("s");
+}
+
+.ds .language-css > code,
+.ds .language-sass > code,
+.ds .language-scss > code {
+    color: #fa8231;
+}
+
+.ds [class*="language-"] .namespace {
+    opacity: 0.7;
+}
+
+.ds .token.atrule {
+    color: #182c61;
+}
+
+.ds .token.attr-name {
+    color: #1b9cfc;
+}
+
+.ds .token.attr-value {
+    color: #38917f;
+}
+
+.ds .token.attribute {
+    color: #38917f;
+}
+
+.ds .token.boolean {
+    color: #6d214f;
+}
+
+.ds .token.builtin {
+    color: #1b9cfc;
+}
+
+.ds .token.cdata {
+    color: #1b9cfc;
+}
+
+.ds .token.char {
+    color: #1b9cfc;
+}
+
+.ds .token.class {
+    color: #1b9cfc;
+}
+
+.ds .token.class-name {
+    color: #6182b8;
+}
+
+.ds .token.comment {
+    color: #aabfc9;
+}
+
+.ds .token.constant {
+    color: #182c61;
+}
+
+.ds .token.deleted {
+    color: #6d214f;
+}
+
+.ds .token.doctype {
+    color: #aabfc9;
+}
+
+.ds .token.entity {
+    color: #6d214f;
+}
+
+.ds .token.function {
+    color: #182c61;
+}
+
+.ds .token.hexcode {
+    color: #fa8231;
+}
+
+.ds .token.id {
+    color: #182c61;
+    font-weight: bold;
+}
+
+.ds .token.important {
+    color: #182c61;
+    font-weight: bold;
+}
+
+.ds .token.inserted {
+    color: #1b9cfc;
+}
+
+.ds .token.keyword {
+    color: #182c61;
+}
+
+.ds .token.number {
+    color: #fa8231;
+}
+
+.ds .token.operator {
+    color: #1b9cfc;
+}
+
+.ds .token.prolog {
+    color: #aabfc9;
+}
+
+.ds .token.property {
+    color: #1b9cfc;
+}
+
+.ds .token.pseudo-class {
+    color: #38917f;
+}
+
+.ds .token.pseudo-element {
+    color: #38917f;
+}
+
+.ds .token.punctuation {
+    color: #1b9cfc;
+}
+
+.ds .token.regex {
+    color: #1b9cfc;
+}
+
+.ds .token.selector {
+    color: #6d214f;
+}
+
+.ds .token.string {
+    color: #38917f;
+}
+
+.ds .token.symbol {
+    color: #182c61;
+}
+
+.ds .token.tag {
+    color: #182c61;
+}
+
+.ds .token.unit {
+    color: #fa8231;
+}
+
+.ds .token.url {
+    color: #6d214f;
+}
+
+.ds .token.variable {
+    color: #6d214f;
+}

@@ -1,0 +1,56 @@
+{
+  "name": "wecount-design-system",
+  "version": "0.1.0",
+  "description": "Design system for We Count.",
+  "scripts": {
+    "build": "run-s clean eleventy",
+    "check-imports": "node bin/check-imports.js",
+    "clean": "rimraf dist",
+    "dev": "eleventy --serve --quiet",
+    "eleventy": "eleventy",
+    "dist": "run-s check-imports build",
+    "lint": "run-s lint:*",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint:markdown": "markdownlint-cli2 \"**/*.md\"",
+    "prepare": "husky",
+    "prepublishOnly": "npm run dist",
+    "start": "run-s clean dev"
+  },
+  "keywords": [
+    "atomic design",
+    "design tokens",
+    "design system",
+    "eleventy"
+  ],
+  "author": "OCAD University <idrc@ocadu.ca>",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "html-prettify": "^1.0.7",
+    "require-glob": "^4.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.4.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "browserslist": "^4.21.10",
+    "chalk": "^4.1.2",
+    "eslint-config-fluid": "^2.1.1",
+    "husky": "^9.1.5",
+    "lightningcss": "^1.21.8",
+    "lint-staged": "^14.0.1",
+    "markdownlint-cli2": "^0.13.0",
+    "markdownlint-config-fluid": "^0.1.5",
+    "npm-run-all2": "^6.2.2",
+    "progress": "^2.0.3",
+    "rimraf": "^5.0.1",
+    "stylelint-config-fluid": "^1.0.0",
+    "stylelint-use-logical-spec": "^5.0.0"
+  },
+  "lint-staged": {
+    "*.css": "stylelint --fix",
+    "*.js": "eslint --fix",
+    "*.md": "markdownlint-cli2 --fix"
+  }
+}
