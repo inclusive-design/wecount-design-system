@@ -1,0 +1,5 @@
+<div class="flow">
+{% for block in params.blocks %}
+    <{{ block.tag }}{% if block.class %} class="{{ block.class }}"{% endif %}>{{ block.text }}</{{ block.tag }}>
+{% endfor %}
+</div>

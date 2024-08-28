@@ -1,0 +1,12 @@
+article {
+    padding-block: 0 1.6875rem;
+    padding-inline: 1.6875rem;
+}
+
+.flow > * + * {
+    margin-block-start: var(--flow-space, 1em);
+}
+
+.p-m {
+    padding: 1.6875rem;
+}
