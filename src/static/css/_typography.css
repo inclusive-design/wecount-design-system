@@ -135,26 +135,26 @@
 }
 
 body {
-    font-family: "Montserrat Alternates", Montserrat, sans-serif;
+    font-family: var(--font-montserrat);
 }
 
 h1 {
-    color: var(--fl-fgColor, #000);
+    color: var(--fl-fgColor, var(--black));
     font-size: clamp(1.5rem, 0.6304rem + 4.3478vw, 4rem);
     font-weight: 700;
     line-height: normal;
 }
 
 h2 {
-    border-block-end: 0.3125rem solid #fdcc70;
-    color: var(--fl-fgColor, #000);
+    border-block-end: 0.3125rem solid var(--fl-fgColor, var(--gold-400));
+    color: var(--fl-fgColor, var(--black));
     font-size: clamp(1.25rem, 0.9891rem + 1.3043vw, 2rem);
     font-weight: 700;
     line-height: 1.5;
 }
 
 h3 {
-    color: var(--fl-fgColor, #000);
+    color: var(--fl-fgColor, var(--black));
     font-size: clamp(0.875rem, 0.6576rem + 1.087vw, 1.5rem);
     font-weight: 600;
     line-height: 1.5;
@@ -163,7 +163,7 @@ h3 {
 p,
 li,
 .subhead {
-    color: var(--fl-fgColor, #000);
+    color: var(--fl-fgColor, var(--black));
     font-size: clamp(0.875rem, 0.6576rem + 1.087vw, 1.5rem);
     font-style: normal;
     line-height: 1.5;

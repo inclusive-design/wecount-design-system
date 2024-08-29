@@ -1,0 +1,35 @@
+:root {
+    --white: #fff;
+    --black: #000;
+    --grey-50: #f8f8f8; /* grey-lightest */
+    --grey-100: #f3f3f3; /* grey-lighter */
+    --grey-150: #e7e7e7; /* grey-light */
+    --grey-200: #c4c4c4; /* grey-shade */
+    --grey-300: #888; /* grey-mid-light */
+    --grey-400: #6c6c6c; /* grey-mid */
+    --grey-600: #313131; /* grey-dark */
+    --red-200: #ffaca7; /* red-light */
+    --red-500: #ff3636; /* red */
+    --blue-50: #abdde9; /* blue-grey */
+    --blue-100: #acdde9; /* blue-light */
+    --blue-150: #84bcde; /* blue */
+    --blue-200: #89b2e0; /* azure */
+    --blue-250: #8caabb; /* blue-alt-light */
+    --blue-300: #6895c6; /* blue-dark */
+    --blue-400: #5c81a9; /* blue-alt, orange-light */
+    --blue-450: #5879a0; /* blue-alt-contrast */
+    --blue-500: #4d6b8d; /* blue-alt-dark */
+    --blue-550: #465d8b; /* green-dark */
+    --blue-600: #2e405b; /* navy-light */
+    --blue-700: #203149; /* navy */
+    --gold-100: #fadc90; /* gold-lightest, orange-focus */
+    --gold-200: #ffe6a7; /* gold-light */
+    --gold-300: #ffcb70; /* yellow */
+    --gold-400: #fdcc70; /* gold */
+    --gold-500: #fcb33e; /* gold-dark */
+    --green-50: #f7fff4; /* green-pale */
+    --green-100: #cee6c5; /* green-light */
+    --green-150: #cde6c4; /* green-grey */
+    --green-200: #b0d0be; /* green */
+    --font-montserrat: "Montserrat Alternates", montserrat, sans-serif;
+}

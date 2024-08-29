@@ -1,3 +1,8 @@
 @import "../design-system/css/reset.css";
+@import "_properties.css";
+@import "_color.css";
 @import "_typography.css";
 @import "_layout.css";
+@import "_links.css";
+@import "_pagination.css";
+@import "_tags.css";

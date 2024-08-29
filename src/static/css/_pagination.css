@@ -1,0 +1,89 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination-list {
+    display: flex;
+    gap: calc(10 / 16 * 1rem);
+    list-style: none;
+    margin-inline: auto;
+}
+
+.pagination-list a:focus {
+    outline-color: transparent;
+}
+
+.pagination-list a.pagination-link {
+    align-items: center;
+    background: var(--fl-bgColor, var(--green-100));
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor, var(--blue-250));
+    color: var(--fl-linkColor, var(--blue-550));
+    display: flex;
+    font-size: clamp(1.125rem, 0.9946rem + 0.6522vw, 1.5rem);
+    font-weight: 500;
+    height: clamp(2.8125rem, 2.6386rem + 0.8696vw, 3.3125rem);
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    width: clamp(2.8125rem, 2.6386rem + 0.8696vw, 3.3125rem);
+}
+
+.pagination-list a.pagination-previous,
+.pagination-list a.pagination-next {
+    color: var(--fl-linkColor, var(--blue-550));
+    display: block;
+    height: clamp(2.8125rem, 2.6386rem + 0.8696vw, 3.3125rem);
+    padding-block: calc(9 / 16 * 1rem);
+    width: calc(24 / 16 * 1rem);
+}
+
+.pagination-list a svg {
+    --vertical: transparent;
+
+    fill: none;
+    height: calc(24 / 16 * 1rem);
+    stroke: currentcolor;
+    stroke-width: calc(2 / 16 * 1rem);
+    width: calc(14 / 16 * 1rem);
+}
+
+.pagination-list a:hover svg,
+.pagination-list a:focus svg {
+    --vertical: currentcolor;
+
+    fill: currentcolor;
+}
+
+.pagination-list a[aria-current="page"] {
+    background-color: var(--fl-bgColor, var(--green-50));
+    box-shadow: inset 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor, var(--blue-500));
+}
+
+.pagination-list a.pagination-link:hover::after,
+.pagination-list a.pagination-link:focus::after {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor, var(--blue-250));
+    content: "";
+    display: block;
+    height: clamp(2.8125rem, 2.6386rem + 0.8696vw, 3.3125rem);
+    left: 0.25rem;
+    position: absolute;
+    top: 0.25rem;
+    width: clamp(2.8125rem, 2.6386rem + 0.8696vw, 3.3125rem);
+}
+
+.pagination-list a[aria-current="page"]:hover::after,
+.pagination-list a[aria-current="page"]:focus::after {
+    box-shadow: inset 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor, var(--blue-500));
+}
+
+.pagination-ellipsis span {
+    color: var(--fl-fgColor, var(--blue-400));
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    height: calc(45 / 16 * 1rem);
+    margin-block-start: 0.25rem;
+}

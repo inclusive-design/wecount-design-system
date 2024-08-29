@@ -1,0 +1,61 @@
+<div class="flow">
+    <h2>Reds</h2>
+    <div class='flex-row flex-wrap gap-m'>
+        {% for color in params.colors %}
+            {% if 'red' in color %}
+                <div class='flex-col gap-s'>
+                    <div class='rounded-full width-4xl height-4xl bg-{{ color }}'></div>
+                    <div class='mx-auto'>{{ color }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Golds</h2>
+    <div class='flex-row flex-wrap gap-m'>
+        {% for color in params.colors %}
+            {% if 'gold' in color %}
+                <div class='flex-col gap-s'>
+                    <div class='rounded-full width-4xl height-4xl bg-{{ color }}'></div>
+                    <div class='mx-auto'>{{ color }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Greens</h2>
+    <div class='flex-row flex-wrap gap-m'>
+        {% for color in params.colors %}
+            {% if 'green' in color %}
+                <div class='flex-col gap-s'>
+                    <div class='rounded-full width-4xl height-4xl bg-{{ color }}'></div>
+                    <div class='mx-auto'>{{ color }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Blues</h2>
+    <div class='flex-row flex-wrap gap-m'>
+        {% for color in params.colors %}
+            {% if 'blue' in color %}
+                <div class='flex-col gap-s'>
+                    <div class='rounded-full width-4xl height-4xl bg-{{ color }}'></div>
+                    <div class='mx-auto'>{{ color }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <h2>Neutrals</h2>
+    <div class='flex-row flex-wrap gap-m'>
+        {% for color in params.colors %}
+            {% if 'black' in color or 'white' in color or 'grey' in color %}
+                <div class='flex-col gap-s'>
+                    <div class='rounded-full width-4xl height-4xl bg-{{ color }}'></div>
+                    <div class='mx-auto'>{{ color }}</div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
