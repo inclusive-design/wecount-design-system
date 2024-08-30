@@ -1,11 +1,11 @@
-const prettify = require("html-prettify");
-const { EleventyRenderPlugin } = require("@11ty/eleventy");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const browserslist = require("browserslist");
-const { bundle, browserslistToTargets } = require("lightningcss");
-const path = require("node:path");
+import prettify  from "html-prettify";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import browserslist from "browserslist";
+import { bundle, browserslistToTargets } from "lightningcss";
+import path from "node:path";
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(EleventyRenderPlugin);
     eleventyConfig.addPlugin(syntaxHighlight);
 

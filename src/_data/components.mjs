@@ -1,5 +1,8 @@
-const slugify = require("@sindresorhus/slugify");
-const requireGlob = require("require-glob");
+import slugify from "@sindresorhus/slugify";
+import {glob} from "glob";
+import {join} from "node:path";
+import {createRequire} from "node:module";
+const require = createRequire(import.meta.url);
 
 function convertComponent(component) {
     // Extract variants from component and remove them
@@ -69,14 +72,26 @@ function prepareMenu(groups) {
     return menu;
 }
 
+export default async function () {
+    const modules = {};
+    const paths = await glob("./src/_includes/**/*.config.js");
+    paths.forEach(componentPath => {
+        if (modules.components === undefined) {
+            modules.components = [];
+        }
+        
+        const component = require(join("../../", componentPath));
+        const pieces = componentPath.split("/");
 
-
-module.exports = async function () {
-    // Pull in all the config files
-    const modules = await requireGlob("../_includes/**/*.config.js", { reducer, bustCache: true });
+        modules.components.push({
+            ...component,
+            name: pieces[pieces.length - 2]
+        })
+    });
 
     // Convert the components into our required format
     const componentGroups = modules.components.map(convertComponent).filter(Boolean);
+    console.log(componentGroups);
 
     // Return the components and the menu, broken down into categories
     return {
