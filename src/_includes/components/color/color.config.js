@@ -26,7 +26,7 @@ module.exports = {
             "blue-600",
             "blue-700",
             "gold-100",
-            "gold-200",
+            "gold-150",
             "gold-300",
             "gold-400",
             "gold-500",

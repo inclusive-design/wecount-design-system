@@ -6,7 +6,7 @@ a:not([class]) {
 
 a:not([class]):hover,
 a:not([class]):focus {
-    background-color: var(--fl-linkColor, var(--gold-100));
+    background-color: var(--fl-linkColor, var(--gold-150));
     color: var(--fl-bgColor, var(--blue-450));
 }
 
@@ -28,7 +28,7 @@ a.cta {
 
 a.cta:hover,
 a.cta:focus {
-    background: var(--fl-bgColor, var(--gold-100));
+    background: var(--fl-bgColor, var(--gold-150));
     box-shadow: inset 0 0 0 calc(3 / 16 * 1rem) var(--black);
     outline-color: transparent;
 }

@@ -118,7 +118,7 @@
 .card.card--resource:hover,
 .card.card--resource:has(a:focus),
 .card.card--resource:focus-within {
-    background-color: var(--fl-bgColor, var(--gold-200));
+    background-color: var(--fl-bgColor, var(--gold-100));
 }
 
 .meta.media-type,

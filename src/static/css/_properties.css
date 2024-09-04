@@ -22,10 +22,10 @@
     --blue-550: #465d8b; /* green-dark */
     --blue-600: #2e405b; /* navy-light */
     --blue-700: #203149; /* navy */
-    --gold-100: #fadc90; /* gold-lightest, orange-focus */
-    --gold-200: #ffe6a7; /* gold-light */
-    --gold-300: #ffcb70; /* yellow */
-    --gold-400: #fdcc70; /* gold */
+    --gold-100: #ffe6a7; /* gold-light */
+    --gold-150: #fadc90; /* gold-lightest, orange-focus */
+    --gold-300: #fdcc70; /* gold */
+    --gold-400: #ffcb70; /* yellow */
     --gold-500: #fcb33e; /* gold-dark */
     --green-50: #f7fff4; /* green-pale */
     --green-100: #cee6c5; /* green-light */
