@@ -103,12 +103,6 @@
         calc(10 / 16 * 1rem) calc(10 / 16 * 1rem) calc(10 / 16 * 1rem) rgba(0 0 0 / 25%);
 }
 
-.card--initiative,
-.card--event,
-.card--resource {
-    font-family: var(--font-fira-sans);
-}
-
 .card.card--initiative:hover,
 .card.card--initiative:has(a:focus),
 .card.card--initiative:focus-within,
