@@ -1,0 +1,17 @@
+<div class="cards{% if params.variantClass %} cards--{{ params.variantClass }}{% endif %}">
+    {% for card in params.cards %}
+        {{ c("card", {
+        "title": card.title,
+        "variantClass": card.variantClass,
+        "author": card.author,
+        "date": card.date,
+        "body": card.body,
+        "imageSrc": card.imageSrc,
+        "imageAlt": card.imageAlt,
+        "topic": card.topic,
+        "tags": card.tags,
+        "readability": card.readability,
+        "mediaType": card.mediaType
+        }) }}
+    {% endfor %}
+</div>

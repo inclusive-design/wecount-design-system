@@ -46,17 +46,6 @@ function convertComponent(component) {
     ];
 }
 
-function reducer(options, tree, fileObj) {
-    if (!fileObj) {return tree;}
-    if (tree.components === undefined) {tree.components = [];}
-    const path = fileObj.path.split("/");
-    tree.components.push({
-        ...fileObj.exports,
-        name: path[path.length - 2]
-    });
-    return tree;
-}
-
 function prepareMenu(groups) {
     const menu = groups.map(group => {
         const [parent, ...variants] = group;
@@ -79,7 +68,7 @@ export default async function () {
         if (modules.components === undefined) {
             modules.components = [];
         }
-        
+
         const component = require(join("../../", componentPath));
         const pieces = componentPath.split("/");
 
@@ -91,7 +80,6 @@ export default async function () {
 
     // Convert the components into our required format
     const componentGroups = modules.components.map(convertComponent).filter(Boolean);
-    console.log(componentGroups);
 
     // Return the components and the menu, broken down into categories
     return {

@@ -1,0 +1,52 @@
+
+<div class="card{% if params.variantClass %} card--{{ params.variantClass }}{% endif %}">
+    <div class="card__content flow">
+        <h2 class="h3">
+            <a href="#">
+                {{ params.title | nl2br | safe }}
+            </a>
+        </h2>
+        {% if params.author %}
+        <p class="meta author">{{ params.author }}</p>
+        {% endif %}
+        {% if params.date %}
+        <p class="meta date">{{ params.date }}</p>
+        {% endif %}
+        {% if params.mediaType %}
+        <p class="meta media-type">
+            <svg aria-hidden="true"><use xlink:href="#media-type" /></svg>
+            Media Type: {{ params.mediaType }}</p>
+        {% endif %}
+        {% if params.readability %}
+        <p class="meta readability">
+            <svg aria-hidden="true"><use xlink:href="#readability" /></svg>
+            Readability: {{ params.readability }}</p>
+        {% endif %}
+        {% if params.topic %}
+        <p class="meta topic">
+            <svg aria-hidden="true"><use xlink:href="#topics" /></svg>
+            Topic: {{ params.topic }}</p>
+        {% endif %}
+        {% if params.tags.length > 0 %}
+        <p class="meta tags">
+            <svg aria-hidden="true"><use xlink:href="#tags" /></svg>
+            Tags:
+            <div class="tags">
+                {% for tag in params.tags %}
+            {{ c("tag", {
+                "text": tag,
+                "variantClass": "tag--lg"
+            }) }}
+        {% endfor %}
+        </div></p>
+        {% endif %}
+        {% if params.body %}
+        <p>{{ params.body | nl2br | safe }}</p>
+        {% endif %}
+    </div>
+    {% if params.imageSrc %}
+    <div class="card__image">
+        <img src="{{ params.imageSrc }}" />
+    </div>
+    {% endif %}
+</div>

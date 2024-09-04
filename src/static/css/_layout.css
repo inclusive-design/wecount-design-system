@@ -1,6 +1,6 @@
 article {
-    padding-block: 0 1.6875rem;
-    padding-inline: 1.6875rem;
+    padding-block: 0 calc(27 / 16 * 1rem);
+    padding-inline: calc(27 / 16 * 1rem);
 }
 
 .flow > * + * {

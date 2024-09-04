@@ -1,0 +1,207 @@
+.cards {
+    display: grid;
+    gap: 2rem;
+}
+
+.cards--resources {
+    gap: 3rem;
+}
+
+@supports (width: min(466px, 100%)) {
+    .cards--resources {
+        grid-template-columns: repeat(auto-fit, minmax(min(466px, 100%), 1fr));
+    }
+}
+
+.cards--home {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.375rem;
+}
+
+@media (width >= 47.5rem) {
+    .cards--home {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-inline: auto;
+        width: 36rem;
+    }
+}
+
+@media (width >= 68.75rem) {
+    .cards--home {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-inline: auto;
+        max-width: 77.5rem;
+        width: 100%;
+    }
+}
+
+.card {
+    background-color: var(--fl-bgColor, var(--white));
+    border-radius: calc(18 / 16 * 1rem);
+    box-shadow: 0 0 calc(7 / 16 * 1rem) rgb(0 0 0 / 40%);
+    color: var(--fl-fgColor, var(--black));
+    inline-size: 100%;
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    position: relative;
+}
+
+.card .meta + .meta {
+    --flow-space: 0;
+}
+
+.card__image img {
+    max-block-size: 20rem;
+}
+
+@media (width < 47.5rem) {
+    .card__image {
+        display: none;
+    }
+}
+
+.card:has(.card__image) {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr auto;
+}
+
+.card .meta {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.card .meta.date {
+    color: var(--fl-fgColor, var(--grey-400));
+}
+
+[class*="fl-theme"]:not(.fl-theme-prefsEditor-default) .card {
+    box-shadow: inset 0 0 0 calc(1 / 16 * 1rem) var(--fl-fgColor);
+}
+
+.card a:hover,
+.card a:focus {
+    background: none;
+    box-shadow: none;
+    color: var(--fl-linkColor, var(--black));
+    outline-color: transparent;
+}
+
+.card a:focus {
+    outline: solid 1px transparent;
+}
+
+.card:hover,
+.card:has(a:focus),
+.card:focus-within {
+    box-shadow:
+        0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor, transparent),
+        calc(10 / 16 * 1rem) calc(10 / 16 * 1rem) calc(10 / 16 * 1rem) rgba(0 0 0 / 25%);
+}
+
+.card--initiative,
+.card--event,
+.card--resource {
+    font-family: var(--font-fira-sans);
+}
+
+.card.card--initiative:hover,
+.card.card--initiative:has(a:focus),
+.card.card--initiative:focus-within,
+.card.card--event:hover,
+.card.card--event:has(a:focus),
+.card.card--event:focus-within,
+.card.card--resource:hover,
+.card.card--resource:has(a:focus),
+.card.card--resource:focus-within {
+    box-shadow: 0 0 calc(35 / 16 * 1rem) rgb(0 0 0 / 55%);
+}
+
+.card.card--resource:hover,
+.card.card--resource:has(a:focus),
+.card.card--resource:focus-within {
+    background-color: var(--fl-bgColor, var(--gold-200));
+}
+
+.meta.media-type,
+.meta.readability,
+.meta.topic,
+.meta.tags {
+    font-size: clamp(0.875rem, 0.575rem + 0.8vw, 1.125rem);
+    font-style: normal;
+    font-weight: 400;
+}
+
+.meta svg {
+    block-size: 1.25rem;
+    fill: var(--fl-fgColor, var(--blue-550));
+    inline-size: 1.25rem;
+    margin-inline-end: 0.75rem;
+}
+
+.card.card--resource .meta + .meta {
+    margin-block-start: 1rem;
+}
+
+.card.card--resource a {
+    color: var(--fl-linkColor, var(--blue-550));
+}
+
+[class*="fl-theme"]:not(.fl-theme-prefsEditor-default) .card:hover,
+[class*="fl-theme"]:not(.fl-theme-prefsEditor-default) .card:has(a:focus),
+[class*="fl-theme"]:not(.fl-theme-prefsEditor-default) .card:focus-within {
+    box-shadow: inset 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor), 0 0 0 calc(2 / 16 * 1rem) var(--fl-linkColor);
+}
+
+.card a::after {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.card--home {
+    aspect-ratio: 271 / 476;
+    border-radius: calc(10 / 16 * 1rem);
+    box-shadow: 0 calc(4 / 16 * 1rem) calc(4 / 16 * 1rem) rgb(0 0 0 / 40%);
+    font-family: var(--font-montserrat);
+    max-inline-size: calc(285 / 16 * 1rem);
+    padding-block: calc(15 / 16 * 1rem);
+    padding-inline: calc(19 / 16 * 1rem);
+}
+
+.card.azure {
+    background-color: var(--fl-bgColor, var(--blue-200));
+}
+
+.card.blue {
+    background-color: var(--fl-bgColor, var(--blue-50));
+}
+
+.card.green {
+    background-color: var(--fl-bgColor, var(--green-150));
+}
+
+.card.yellow {
+    background-color: var(--fl-bgColor, var(--gold-300));
+}
+
+.card h2 {
+    border-block-end: 0;
+}
+
+.card--initiative h2,
+.card--event h2 {
+    border-block-end: calc(2 / 16 * 1rem) solid var(--fl-fgColor, var(--grey-200));
+    padding-block-end: 1em;
+}
+
+.card a {
+    color: var(--fl-linkColor, inherit);
+}
