@@ -32,8 +32,8 @@
     "html-prettify": "^1.0.7"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.4.1",
-    "@commitlint/config-conventional": "^19.4.1",
+    "@commitlint/cli": "^20.0.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "browserslist": "^4.21.10",
     "chalk": "^4.1.2",
     "eslint-config-fluid": "^2.1.1",
